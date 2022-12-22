@@ -1,0 +1,173 @@
+<!DOCTYPE html5>
+<html>
+<head>
+	<title>Quem Sou Eu?</title>
+	<style type="text/css">
+	body{
+      background-color: #fcddd4;
+      font-family: 'Roboto Mono',monospace;
+      text-align: center;
+		/*      margin-top: 1%;*/
+		margin:0;
+
+    }
+    img{
+      border: 20px solid white;
+      width: 40%;
+    }
+    h1{
+      font-size: 250%;
+      margin-bottom: -1%; 
+    }
+
+        button{
+      background-color: #fffde3;
+      border: 2px solid #691800;
+      color:#691800;
+      height: 8%;
+      width: 20%;
+      font-size: 100%;
+      font-weight: bold;
+      font-family: 'Roboto Mono',monospace;
+      border-radius: 10px;
+      margin: 5px;
+      cursor: pointer;
+
+    }
+
+    button:hover{
+      background-color: #691800;
+      border: 2px solid #691800;
+      color:#fffde3;
+      height: 8%;
+      width: 20%;
+      font-size: 100%;
+      font-weight: bold;
+      font-family: 'Roboto Mono',monospace;
+      border-radius: 10px;
+      margin: 5px;
+      cursor: pointer;
+    }
+	</style>
+</head>
+<body>
+	<h1>Quem sou eu?</h1>
+	<h4>Versão Harry Potter</h4>
+
+	<div id="um" style="display:block;">
+		<img src="hermione.jpg" width="320">
+	</div>
+	<br>
+	<div id="dois" style="display:none;">
+		<img src="harry.jpg" width="320">
+	</div>
+	<br>	
+	<div id="tres" style="display:none;">
+		<img src="sirius.jpg" width="320">
+	</div>
+	
+
+	<div id="mulheresUM" class="um" style="display:block;">
+		<button onclick="perguntaUM()">Hermione Granger</button>
+		<button onclick="respostaErrada()">Luna Lovegood</button>
+		<button onclick="respostaErrada()">Bellatrix Lestrange</button>
+	</div><br>
+	<div id="homensUM" class="dois" style="display:none;">
+		<button onclick="respostaErrada()">Draco Malfoy</button>
+		<button onclick="perguntaDOIS()">Harry Potter</button>
+		<button onclick="respostaErrada()">Ronald Weasley</button>
+	</div><br>
+	<div id="homensDOIS" class="tres" style="display:none;">
+		<button onclick="perguntaTRES()">Sirius Black</button>
+		<button onclick="respostaErrada()">Severus Snape</button>
+		<button onclick="respostaErrada()">Lucio Malfoy</button>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	function perguntaUM(){
+
+		var x = document.getElementById("mulheresUM");
+		var xa = document.getElementById("um");
+
+		var y = document.getElementById("homensUM");
+		var ya = document.getElementById("dois");
+
+		var z = document.getElementById("homensDOIS");
+		var za = document.getElementById("tres");
+
+		if (x.style.display == "block" && xa.style.display == "block" ) {
+			alert('Parabéns, resposta correta!');
+			x.style.display = "none";
+			xa.style.display = "none";
+
+			y.style.display = "block";
+			ya.style.display = "block";
+
+			z.style.display = "none";
+			za.style.display = "none";
+		}else{
+			alert('none')
+		}
+	}
+
+	function perguntaDOIS(){
+
+		var x = document.getElementById("mulheresUM");
+		var xa = document.getElementById("um");
+
+		var y = document.getElementById("homensUM");
+		var ya = document.getElementById("dois");
+
+		var z = document.getElementById("homensDOIS");
+		var za = document.getElementById("tres");
+
+		if (y.style.display == "block" && ya.style.display == "block" ) {
+			alert('Parabéns, resposta correta!');
+			x.style.display = "none";
+			xa.style.display = "none";
+
+			y.style.display = "none";
+			ya.style.display = "none";
+
+			z.style.display = "block";
+			za.style.display = "block";
+		}else{
+			alert('none')
+		}
+	}
+
+	function perguntaTRES(){
+
+		var x = document.getElementById("mulheresUM");
+		var xa = document.getElementById("um");
+
+		var y = document.getElementById("homensUM");
+		var ya = document.getElementById("dois");
+
+		var z = document.getElementById("homensDOIS");
+		var za = document.getElementById("tres");
+
+		if (z.style.display == "block" && za.style.display == "block" ) {
+			alert('Parabéns, resposta correta!');
+			x.style.display = "none";
+			xa.style.display = "none";
+
+			y.style.display = "none";
+			ya.style.display = "none";
+
+			z.style.display = "none";
+			za.style.display = "none";
+
+			window.location="quiz-harry-3.html"
+		}else{
+			alert('none')
+		}
+	}
+
+	function respostaErrada(){
+		alert('Resposta Errada! Tente novamente')
+	}
+</script>
+
+<!---show e hide com imagem e if e else com botoes-->
